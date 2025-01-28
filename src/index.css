@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.prose {
+  @apply text-gray-800 break-words;
+}
+
+.prose pre {
+  @apply bg-[#1a1a1a] text-white rounded-lg p-4 my-4 overflow-x-auto relative;
+  max-width: 100%;
+}
+
+.prose code {
+  @apply font-mono text-sm;
+}
+
+.prose p {
+  @apply my-2;
+}
+
+/* PrismJS Theme Overrides */
+:not(pre) > code {
+  @apply bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-gray-400;
+}
+
+.token.function {
+  @apply text-blue-300;
+}
+
+.token.keyword {
+  @apply text-purple-300;
+}
+
+.token.string {
+  @apply text-green-300;
+}
+
+.token.number {
+  @apply text-orange-300;
+}
+
+.token.operator {
+  @apply text-yellow-300;
+}
+
+.token.punctuation {
+  @apply text-gray-300;
+}
+
+/* Code block container */
+pre[class*="language-"] {
+  @apply relative;
+}
+
+/* Ensure code doesn't overflow */
+.prose pre > code {
+  @apply block w-full overflow-x-auto;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded hover:bg-gray-400;
+}
+
+/* Textarea autoresize */
+textarea {
+  @apply transition-all duration-200;
+}
