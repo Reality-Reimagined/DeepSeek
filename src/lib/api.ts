@@ -269,7 +269,7 @@ export const streamCompletion = async (
       messages: messages as { role: 'user' | 'assistant'; content: string; }[],
       model: 'deepseek-r1-distill-llama-70b',
       temperature: 0.6,
-      max_tokens: 12600,
+      max_tokens: 6000,
       top_p: 0.95,
       stream: true,
       stop: null
